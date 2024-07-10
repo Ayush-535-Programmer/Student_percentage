@@ -1,0 +1,111 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Marks Predictor</title>
+    <style>
+      body{
+        background-color: rgb(224, 219, 219);
+      }
+      .parent {
+        box-shadow: 1px 1px 1px 1px rgb(254, 254, 255);
+        background-color: white;
+        justify-content: center;
+        width: auto;
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 5px;
+        border: 1.5px solid rgba(253, 253, 255, 0.963);
+      }
+      .btn {
+        padding: 3px;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 15px;
+        margin-top: 5px;
+        font-size: 15px;
+        color: rgba(130, 129, 129, 0.865);
+        border: 1px solid rgba(0, 0, 0, 0.176);
+        background-color: rgba(252, 254, 255, 0.644);
+      }
+      button:hover {
+        background-color: rgb(214, 249, 214);
+        color: rgb(28, 21, 128);
+      }
+      .para{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: rgb(66, 74, 66);
+      }
+      h1{
+        color: rgba(11, 19, 26, 0.936);
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .btn3{
+        margin-bottom: 15px;
+        margin-top: 20px;
+        color: rgb(104, 121, 226);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(220, 233, 245);
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        cursor: pointer;
+      }
+      .btn-div{
+        display: flex;
+        justify-content: center;
+        margin-left: -30px;
+        align-items: center;
+      }
+      .form{
+        box-shadow: 1px 1px 1px 1px rgb(254, 254, 255);
+        background-color: white;
+        justify-content: center;
+        width: auto;
+        padding: 2%;
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 5px;
+        border: 1.5px solid rgba(226, 226, 228, 0.963);
+        margin-bottom: 25px;
+      }
+      .head{
+        margin: 10px;
+      }
+      .predicted_text{
+        font-size: larger;
+        margin-bottom: 25px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+    <div class="parent">
+      <h1 style="margin-left: 10px">Student Marks Predictor</h1>
+      <p class="para">This is a simple model that predicts the score of Students We needs to fill hours of preparation done by the students per day and on the basis of that this model is going to predict how much percent the student can get</p>
+      <div class="btn-div">
+        <form class= "form" action="/" method="POST">
+            <div class="container">
+                <div class="head">Study Hours</div>
+                <input type="number" id="marks" name = "marks" placeholder="1">
+            </div>
+            <button type="submit" class="btn btn3">
+                Predict
+              </button>
+        </form>
+      </div>
+
+      <div class="predicted_text">{{percentage_marks}}</div>
+    </div>
+  </center>
+  </body>
+</html>
